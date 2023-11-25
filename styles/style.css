@@ -84,6 +84,22 @@ section:hover {
   animation: section ease-out 1s;
 }
 
+.profile-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* To maintain aspect ratio */
+  border-radius: 50%; /* To make it circular, adjust as needed */
+  margin-left: 40px; /* Adjust margin as needed */
+  position: absolute;
+  left: 0;
+}
+
 .projects:hover {
   animation: unset;
 }
@@ -127,17 +143,37 @@ section:hover {
   font-size: 1.5em;
 }
 
-.about,
-.skills {
-  text-align: center;
-}
-
 .projects {
   text-align: left;
 }
 
+.skills {
+  text-align: center;
+}
+
+.star-full {
+  color: #5a81c8;
+  font-size: 3em;
+}
+
+.star-empty {
+  color: #364b73;
+  font-size: 3em;
+}
+
+.about,
 .contact {
   text-align: right;
+}
+
+.about p,
+.about h2 {
+  margin-right: 40px;
+}
+
+.contact a,
+.contact h2 {
+  margin-right: 40px;
 }
 
 footer {
