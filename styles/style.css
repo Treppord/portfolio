@@ -5,6 +5,11 @@
   --accent-color: #40414f;
 }
 
+@font-face {
+  font-family: "ProximaNova";
+  src: url(../assets/fonts/ProximaNova-Black_1553558671[2250].otf);
+}
+
 .fade-in-container {
   opacity: 0;
   transform: translateY(-20px);
@@ -19,9 +24,23 @@ header {
   text-align: center;
 }
 
+.header-background {
+  position: relative;
+  height: 100vh; /* Adjust as needed */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  z-index: 1;
+  /* Your existing styles for header h1 */
+}
+
 body {
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "ProximaNova", sans-serif;
   background-color: var(--main-bg-color);
   color: var(--text-color);
   overflow-x: hidden;
@@ -33,15 +52,16 @@ header h1::before {
   overflow: hidden;
   border-right: 0.15em solid white; /* Adjust the border style as needed */
   white-space: nowrap;
-  animation: typing 6s steps(60, end) infinite;
+  animation: typing 10s steps(100, end) infinite;
 }
 
 @keyframes typing {
-  from {
+  from,
+  to {
     width: 0;
   }
-  to {
-    width: 84%;
+  50% {
+    width: 100%;
   }
 }
 
@@ -89,6 +109,10 @@ section:hover {
   margin: 10px 0;
 }
 
+.projects h2 {
+  margin-left: 20px;
+}
+
 .project-link {
   color: #3ca5ff;
   background-color: var(--alt-bg-color);
@@ -103,7 +127,8 @@ section:hover {
   font-size: 1.5em;
 }
 
-.about {
+.about,
+.skills {
   text-align: center;
 }
 
@@ -113,6 +138,11 @@ section:hover {
 
 .contact {
   text-align: right;
+}
+
+footer {
+  color: #ffffff6f;
+  text-align: center;
 }
 
 @keyframes fadeInUp {
@@ -135,5 +165,105 @@ section:hover {
   }
   100% {
     background-color: var(--accent-color);
+  }
+}
+
+@media (max-width: 1236px) {
+  h1 {
+    font-size: 2.5em; /* Adjust the font size as needed for smaller screens */
+  }
+
+  header h1::before {
+    content: "Jasper Droppert - Front-End / Software Developer";
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid white; /* Adjust the border style as needed */
+    white-space: nowrap;
+    animation: typing 8s steps(80, end) infinite;
+  }
+
+  @keyframes typing {
+    from,
+    to {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  h1 {
+    font-size: 2em; /* Adjust the font size as needed for smaller screens */
+  }
+
+  header h1::before {
+    content: "Jasper Droppert - Front-End / Software Developer";
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid white; /* Adjust the border style as needed */
+    white-space: nowrap;
+    animation: typing 8s steps(80, end) infinite;
+  }
+
+  @keyframes typing {
+    from,
+    to {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 785px) {
+  h1 {
+    font-size: 1.5em; /* Adjust the font size as needed for smaller screens */
+  }
+
+  header h1::before {
+    content: "Jasper Droppert - Front-End / Software Developer";
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid white; /* Adjust the border style as needed */
+    white-space: nowrap;
+    animation: typing 7s steps(70, end) infinite;
+  }
+
+  @keyframes typing {
+    from,
+    to {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 614px) {
+  h1 {
+    font-size: 1em; /* Adjust the font size as needed for smaller screens */
+  }
+
+  header h1::before {
+    content: "Jasper Droppert - Front-End / Software Developer";
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid white; /* Adjust the border style as needed */
+    white-space: nowrap;
+    animation: typing 7s steps(70, end) infinite;
+  }
+
+  @keyframes typing {
+    from,
+    to {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
   }
 }
