@@ -2,7 +2,7 @@
   --main-bg-color: #2a2a31;
   --alt-bg-color: #545668;
   --text-color: #ffffff;
-  --accent-color: #40414f;
+  --accent-color: #40414f3c;
 }
 
 @font-face {
@@ -229,6 +229,21 @@ footer {
 }
 
 @media (max-width: 970px) {
+  .profile-container {
+    position: relative;
+    translate: 0 -5em;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 40px;
+    position: absolute;
+    left: 0;
+  }
+
   h1 {
     font-size: 2em;
   }
@@ -279,6 +294,20 @@ footer {
 }
 
 @media (max-width: 614px) {
+  .profile-container {
+    position: relative;
+    translate: 0 -5em;
+  }
+
+  .profile-image {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 40px;
+    position: absolute;
+    left: 0;
+  }
   h1 {
     font-size: 1em;
   }
