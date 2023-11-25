@@ -294,6 +294,13 @@ footer {
 }
 
 @media (max-width: 614px) {
+  .about p {
+    text-align: center;
+  }
+  .contact {
+    text-align: center;
+  }
+
   .profile-container {
     position: relative;
     translate: 0 -5em;
