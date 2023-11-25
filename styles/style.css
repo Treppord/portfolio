@@ -1,0 +1,78 @@
+:root {
+  --main-bg-color: #2a2a31;
+  --text-color: #ffffff;
+  --accent-color: #40414f;
+}
+
+.fade-in-container {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp ease-out 3s;
+  animation-fill-mode: forwards;
+  background-color: var(--main-bg-color);
+}
+
+header {
+  color: var(--text-color);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+section {
+  margin-bottom: 80px;
+  padding: 20px; /* Add or adjust padding as needed */
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+section:hover {
+  animation: section ease-out 1s;
+}
+
+.project {
+  margin-bottom: 40px;
+}
+
+.project h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.project p {
+  margin: 10px 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes section {
+  0% {
+    background-color: var(--accent-color);
+  }
+  50% {
+    background-color: #70728b;
+  }
+  100% {
+    background-color: var(--accent-color);
+  }
+}
