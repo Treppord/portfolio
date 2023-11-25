@@ -43,7 +43,7 @@ Visit the live website at [treppord.github.io/portfolio/](https://www.treppord.g
 
 ## Project Structure
 
-````plaintext
+```plaintext
 |-- index.html
 |-- styles/
 |   |-- style.css
@@ -55,7 +55,7 @@ Visit the live website at [treppord.github.io/portfolio/](https://www.treppord.g
 |       |-- me.png
 |-- README.md
 
-```markdown
+```
 ## Contributing
 
 If you'd like to contribute to this project, please follow the [Contributing Guidelines](CONTRIBUTING.md).
