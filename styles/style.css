@@ -1,5 +1,6 @@
 :root {
   --main-bg-color: #2a2a31;
+  --alt-bg-color: #545668;
   --text-color: #ffffff;
   --accent-color: #40414f;
 }
@@ -26,6 +27,28 @@ body {
   overflow-x: hidden;
 }
 
+header h1::before {
+  content: "Jasper Droppert - Front-End / Software Developer";
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid white; /* Adjust the border style as needed */
+  white-space: nowrap;
+  animation: typing 6s steps(60, end) infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 84%;
+  }
+}
+
+h1 {
+  font-size: 3em;
+}
+
 h2 {
   font-size: 2em;
 }
@@ -41,8 +64,20 @@ section:hover {
   animation: section ease-out 1s;
 }
 
+.projects:hover {
+  animation: unset;
+}
+
+.project:hover {
+  animation: section ease-out 1s;
+}
+
 .project {
   margin-bottom: 40px;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 15px;
+  position: relative; /* Add this to make positioning of link relative to the project */
 }
 
 .project h3 {
@@ -52,6 +87,20 @@ section:hover {
 
 .project p {
   margin: 10px 0;
+}
+
+.project-link {
+  color: #3ca5ff;
+  background-color: var(--alt-bg-color);
+  padding: 20px;
+  display: block;
+  text-align: center;
+  border-radius: 0 0 8px 8px; /* Match the bottom border-radius of the project */
+}
+
+.software {
+  color: #109f4e;
+  font-size: 1.5em;
 }
 
 .about {
