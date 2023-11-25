@@ -27,20 +27,19 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 
 - HTML5
 - CSS3
-- JavaScript (optional, if applicable)
-- [Add any additional technologies used]
+- JavaScript
 
 ## Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-portfolio.git
+   git clone https://github.com/Treppord/portfolio.git
    ```
 
 ## Usage
 
-Visit the live website at [your-portfolio-url.com](https://www.your-portfolio-url.com).
+Visit the live website at [treppord.github.io/portfolio/](https://www.treppord.github.io/portfolio/).
 
 ## Project Structure
 
@@ -52,8 +51,8 @@ Visit the live website at [your-portfolio-url.com](https://www.your-portfolio-ur
 |   |-- main.js (if applicable)
 |-- assets/
 |   |-- images/
-|       |-- project1.jpg
-|       |-- project2.png
+|       |-- JAVA.jpg
+|       |-- me.png
 |-- README.md
 
 ```markdown
