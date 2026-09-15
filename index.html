@@ -3,147 +3,348 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <title>Jasper Droppert — Software Developer</title>
+    <meta
+      name="description"
+      content="Jasper Droppert builds Minecraft mods in Java, custom game engines in C, Rust and Go, and the websites, apps and APIs around them."
+    />
+    <meta name="theme-color" content="#07070d" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jasper Droppert — Software Developer" />
+    <meta
+      property="og:description"
+      content="Minecraft mods, custom game engines, websites, apps and APIs."
+    />
+    <meta property="og:url" content="https://treppord.github.io/portfolio/" />
+    <meta property="og:image" content="https://treppord.github.io/portfolio/assets/portrait.jpg" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='.55' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23f472b6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='800' text-anchor='middle' fill='%2307070d'%3EJD%3C/text%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.github.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400..600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500..700&display=swap"
     />
-    <title>Jasper Droppert - Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="scripts/projects.js" defer></script>
+    <script src="scripts/main.js" defer></script>
   </head>
   <body>
-    <div class="fade-in-container">
-      <header class="header-background">
-        <h1></h1>
-      </header>
+    <a class="skip-link" href="#work">Skip to projects</a>
 
-      <section class="about">
-        <h2>About Me</h2>
-        <div class="profile-container">
-          <img src="assets/my_face.jpg" alt="Me" class="profile-image" />
-        </div>
-        <p>
-          I embarked on my coding journey at the age of 13, <br />diving into
-          the world of programming through JAVA to create mods for Minecraft.
-          <br />Over the past 6 years, my passion for coding has flourished,<br />
-          leading me to explore not only game development but also web
-          technologies. <br /><br />Gradually, I expanded my skill set to
-          include HTML, CSS, and JavaScript, <br />broadening my horizons in
-          both programming and design. <br />My journey has been marked by
-          successful Minecraft mods showcased on platforms like Curseforge.
-          <br /><br />Currently, I am pursuing my education in Amsterdam at the
-          Hogeschool van Amsterdam. <br />I am enrolled in the Frontend Design
-          and Development program, <br />where I continue to refine my skills
-          and knowledge in the dynamic field of web development.
-        </p>
-      </section>
+    <!-- Icon sprite -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-lock" viewBox="0 0 24 24">
+        <rect x="4" y="10.5" width="16" height="10.5" rx="2.5" />
+        <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" />
+      </symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" />
+      </symbol>
+      <symbol id="i-github" viewBox="0 0 16 16">
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+        />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" /></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6" /></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="m20 20-3.5-3.5" />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z" />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2.5" />
+        <path d="m4 7 8 6 8-6" />
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24">
+        <rect x="9" y="9" width="11" height="11" rx="2.5" />
+        <path d="M15 9V6.5A2.5 2.5 0 0 0 12.5 4h-6A2.5 2.5 0 0 0 4 6.5v6A2.5 2.5 0 0 0 6.5 15H9" />
+      </symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24">
+        <path d="M20 11a8 8 0 0 0-14.6-4.5M4 13a8 8 0 0 0 14.6 4.5" />
+        <path d="M5 3v4h4M19 21v-4h-4" />
+      </symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24">
+        <path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7Z" />
+      </symbol>
+    </svg>
 
-      <section class="projects">
-        <h2>Projects</h2>
-        <!-- Add your projects here -->
-        <div class="project">
-          <p class="software">WEBSITE</p>
-          <h3>Tuliprolls.nl</h3>
-          <p>
-            A Custom Design for the website tuliprolls.nl,<br />
-            an online webstore. Both the Beta (Github) design and<br />
-            the current design. 
-          </p>
-          <a
-            href="https://github.com/Treppord/tulip-rolls"
-            class="project-link"
-            >Check it out on Github</a
-          >
-        </div>
-        <br />
-        <div class="project">
-          <p class="software">SOFTWARE</p>
-          <h3>Minecraft Star Wars Mod</h3>
-          <p>
-            A JAVA 17 made minecraft mod made for the latest version.<br />
-            Introducing self-designed textures and models.
-          </p>
-          <a
-            href="https://curseforge.com/minecraft/mc-mods/pswg-addon-episode-1"
-            class="project-link"
-            >Check it out on CurseForge</a
-          >
-        </div>
-        <br />
-        <div class="project">
-          <p class="software">SOFTWARE</p>
-          <h3>Minecraft Car Mod</h3>
-          <p>
-            A JAVA 17 made minecraft mod made for the latest version.<br />
-            Introducing self-designed textures and models.
-          </p>
-          <a
-            href="https://www.curseforge.com/minecraft/mc-mods/treps-cars"
-            class="project-link"
-            >Check it out on CurseForge</a
-          >
-        </div>
-        <br />
-        <div class="project">
-          <p class="software">WEBSITE</p>
-          <h3>Funda Redesign Assignment</h3>
-          <p>
-            In the early days of my college, I was given the task<br />
-            to redesign the funda saved houses website for a more dynamic
-            design.
-          </p>
-          <a
-            href="https://treppord.github.io/look-and-feel-custom-properties/"
-            class="project-link"
-            >Check it out on Github</a
-          >
-        </div>
-      </section>
+    <div class="progress" aria-hidden="true"></div>
 
-      <section class="skills">
-        <h2>Skills</h2>
-        <p>
-          - JAVA <span class="star-full">&Star;&Star;&Star;&Star;</span
-          ><span class="star-empty">&Star;</span>
-        </p>
-        <p>
-          - JavaScript <span class="star-full">&Star;&Star;&Star;</span
-          ><span class="star-empty">&Star;&Star;</span>
-        </p>
-        <p>
-          - CSS <span class="star-full">&Star;&Star;&Star;</span
-          ><span class="star-empty">&Star;&Star;</span>
-        </p>
-        <p>
-          - HTML <span class="star-full">&Star;&Star;&Star;</span
-          ><span class="star-empty">&Star;&Star;</span>
-        </p>
-      </section>
-
-      <section class="contact">
-        <h2>Contact</h2>
-        <a
-          href="https://github.com/Treppord"
-          target="_blank"
-          class="github-link"
-        >
-          <img
-            src="assets/github-icon/icons8-github-48.svg"
-            alt="GitHub"
-            width="48"
-            height="48"
-          />
+    <header class="nav">
+      <div class="container nav__inner">
+        <a class="brand" href="#top" aria-label="Jasper Droppert, back to top">
+          <span class="brand__mark" aria-hidden="true">JD</span>
+          <span class="brand__name">Jasper Droppert</span>
         </a>
-        <a href="droppertjasper@gmail.com" target="_blank" class="gmail-link">
-          <img
-            src="assets/gmail-icon/icons8-gmail-logo-48.svg"
-            alt="GMail"
-            width="48"
-            height="48"
-          />
-        </a>
+        <nav aria-label="Primary">
+          <ul class="nav__links" id="nav-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav__end">
+          <a class="btn btn--small nav__cta" href="https://github.com/Treppord" target="_blank" rel="noopener">
+            <svg class="i i--fill" aria-hidden="true"><use href="#i-github" /></svg>GitHub
+          </a>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <canvas class="hero__canvas" aria-hidden="true"></canvas>
+        <div class="hero__orb" aria-hidden="true"></div>
+        <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+        <div class="container hero__content">
+          <p class="pill" data-intro style="--d: 0.1s">
+            <span class="pulse" aria-hidden="true"></span>Software developer · mods, engines &amp; the web
+          </p>
+
+          <h1 class="hero__title">
+            <span class="line"><span style="--d: 0.15s">Jasper</span></span>
+            <span class="line"><span style="--d: 0.28s">Droppert</span></span>
+          </h1>
+
+          <p class="lead" data-intro style="--d: 0.55s">
+            I build
+            <span class="sr-only">Minecraft mods, game engines, websites, apps and APIs.</span>
+            <span
+              class="rotator"
+              aria-hidden="true"
+              data-rotate='["Minecraft mods", "game engines", "websites", "mobile apps", "APIs"]'
+              >Minecraft mods</span
+            ><br />
+            From Java mods on CurseForge to engines written from scratch in C, Rust and Go, plus
+            the websites, apps and APIs around them.
+          </p>
+
+          <div class="hero__actions" data-intro style="--d: 0.7s">
+            <a class="btn btn--primary" href="#work" data-magnetic>
+              Explore my work<svg class="i" aria-hidden="true"><use href="#i-down" /></svg>
+            </a>
+            <a class="btn" href="#contact" data-magnetic>Get in touch</a>
+          </div>
+
+          <dl class="stats" data-intro style="--d: 0.85s">
+            <div class="stat">
+              <dt class="stat__label">Projects</dt>
+              <dd class="stat__value"><span data-stat="projects">0</span></dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__label">Languages</dt>
+              <dd class="stat__value"><span data-stat="languages">0</span></dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__label">Years coding</dt>
+              <dd class="stat__value"><span data-stat="years">0</span><span class="stat__plus">+</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <a class="scroll-cue" href="#work" aria-label="Scroll to projects"><span></span></a>
       </section>
-    </div>
-    <footer><p>&COPY; Jasper Droppert</p></footer>
-    <script src="scripts/main.js"></script>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track"></div>
+      </div>
+
+      <!-- Work -->
+      <section class="section" id="work">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <p class="kicker">01 — Work</p>
+            <h2 class="section__title">Things I've <em>built</em></h2>
+            <p class="section__lead">
+              Every project I've pushed to GitHub in the last two years, grouped by what it is.
+              Many are still private. The badges check GitHub live, so they flip to public (with a
+              source link) the moment a repo opens up.
+            </p>
+          </header>
+
+          <div class="toolbar" data-reveal>
+            <div class="toolbar__row">
+              <label class="search">
+                <span class="sr-only">Search projects</span>
+                <svg class="i" aria-hidden="true"><use href="#i-search" /></svg>
+                <input id="project-search" type="search" placeholder="Search by name, language or tag…" autocomplete="off" spellcheck="false" />
+                <kbd aria-hidden="true">/</kbd>
+              </label>
+
+              <div class="toolbar__controls">
+                <div class="segmented" id="visibility-filter" role="group" aria-label="Filter by repository visibility" data-active="all">
+                  <button type="button" data-visibility="all" aria-pressed="true">All <span class="seg__count"></span></button>
+                  <button type="button" data-visibility="public" aria-pressed="false">
+                    <svg class="i" aria-hidden="true"><use href="#i-globe" /></svg>Public <span class="seg__count"></span>
+                  </button>
+                  <button type="button" data-visibility="private" aria-pressed="false">
+                    <svg class="i" aria-hidden="true"><use href="#i-lock" /></svg>Private <span class="seg__count"></span>
+                  </button>
+                </div>
+
+                <label class="sort">
+                  <span class="sr-only">Sort projects</span>
+                  <select id="project-sort" class="select">
+                    <option value="updated">Recently updated</option>
+                    <option value="created">Newest first</option>
+                    <option value="name">Name (A–Z)</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <div class="chips" id="category-chips" role="group" aria-label="Filter by category"></div>
+          </div>
+
+          <div class="results-bar">
+            <p class="results-summary" id="results-summary" aria-live="polite"></p>
+            <p class="status" id="visibility-status" data-state="loading">
+              <span class="status__dot" aria-hidden="true"></span>
+              <span class="status__text">Checking repository visibility on GitHub…</span>
+              <button class="status__refresh" type="button" id="visibility-refresh">
+                <svg class="i" aria-hidden="true"><use href="#i-refresh" /></svg>Re-check
+              </button>
+            </p>
+          </div>
+
+          <div id="project-results" class="results">
+            <noscript>
+              <p class="noscript">
+                Turn on JavaScript to browse and filter projects, or see them all on
+                <a href="https://github.com/Treppord">github.com/Treppord</a>.
+              </p>
+            </noscript>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="about">
+        <div class="container about">
+          <div class="portrait-wrap" data-reveal>
+            <figure class="portrait">
+              <img src="assets/portrait.jpg" alt="Portrait of Jasper Droppert" width="506" height="900" loading="lazy" decoding="async" />
+            </figure>
+            <p class="portrait__tag"><svg class="i" aria-hidden="true"><use href="#i-sparkle" /></svg>Coding since age 13</p>
+          </div>
+
+          <div class="about__text">
+            <header class="section__head" data-reveal>
+              <p class="kicker">02 — About</p>
+              <h2 class="section__title">Curious about <em>how things work</em>, one layer down</h2>
+            </header>
+            <div data-reveal>
+              <p>
+                I wrote my first code at 13, in <strong>Java</strong>, to make mods for Minecraft. That
+                tinkering turned into mods published on <strong>CurseForge</strong>, and into a habit of
+                wanting to understand what happens underneath.
+              </p>
+              <p>
+                These days I work across the stack: Fabric mods and modding APIs in Java,
+                <strong>game engines built from scratch</strong> in C, Rust and Go, and websites, apps and
+                APIs in TypeScript and Go. My Frontend Design &amp; Development studies at the Hogeschool
+                van Amsterdam made design matter to me as much as the code.
+              </p>
+            </div>
+
+            <ol class="timeline" data-reveal>
+              <li>
+                <span class="timeline__when">Age 13</span>
+                <p class="timeline__what">First Minecraft mod</p>
+                <p>Learned Java by taking the game apart.</p>
+              </li>
+              <li>
+                <span class="timeline__when">CurseForge</span>
+                <p class="timeline__what">Published mods</p>
+                <p>Star Wars add-ons and a car mod, with my own textures and models.</p>
+              </li>
+              <li>
+                <span class="timeline__when">Hogeschool van Amsterdam</span>
+                <p class="timeline__what">Frontend Design &amp; Development</p>
+                <p>HTML, CSS, JavaScript, accessibility and interaction design.</p>
+              </li>
+              <li>
+                <span class="timeline__when">Now</span>
+                <p class="timeline__what">Engines, apps &amp; APIs</p>
+                <p>Custom engines, full-stack web and mobile apps, and the services behind them.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stack -->
+      <section class="section" id="stack">
+        <div class="container">
+          <header class="section__head" data-reveal>
+            <p class="kicker">03 — Stack</p>
+            <h2 class="section__title">What my code is <em>made of</em></h2>
+            <p class="section__lead">Calculated from the projects above, so it's always up to date.</p>
+          </header>
+
+          <div class="stack">
+            <div class="panel" data-reveal>
+              <h3 class="panel__title">Languages across my projects</h3>
+              <ol class="bars" id="language-bars"></ol>
+            </div>
+            <div class="panel" data-reveal>
+              <h3 class="panel__title">Frameworks, platforms &amp; tools</h3>
+              <ul class="cloud" id="tool-cloud"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section section--contact" id="contact">
+        <div class="container">
+          <div class="contact" data-reveal>
+            <p class="kicker kicker--center">04 — Contact</p>
+            <h2 class="contact__title">Got an idea?<br /><em>Let's build it.</em></h2>
+            <p class="section__lead">Mods, engines, websites, apps or APIs. I'm happy to talk shop.</p>
+            <div class="contact__actions">
+              <a class="btn btn--primary btn--large" href="mailto:droppertjasper@gmail.com" data-magnetic>
+                <svg class="i" aria-hidden="true"><use href="#i-mail" /></svg>droppertjasper@gmail.com
+              </a>
+              <button class="btn btn--large" type="button" id="copy-email" data-email="droppertjasper@gmail.com" data-magnetic>
+                <svg class="i" aria-hidden="true"><use href="#i-copy" /></svg>Copy email
+              </button>
+              <a class="btn btn--large" href="https://github.com/Treppord" target="_blank" rel="noopener" data-magnetic>
+                <svg class="i i--fill" aria-hidden="true"><use href="#i-github" /></svg>@Treppord
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year">2026</span> Jasper Droppert</p>
+        <p>Hand-built with HTML, CSS &amp; JavaScript. No frameworks.</p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
   </body>
 </html>
